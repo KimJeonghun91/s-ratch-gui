@@ -8,7 +8,7 @@ COLLABORATOR=champierre
 EXTENSION_DESCRIPTION="ML2Scratch Blocks."
 
 cd node_modules/scratch-vm
-npm install ml5  —legacy-peer-deps
+npm install ml5 --legacy-peer-deps
 cd ../../
 
 mkdir -p node_modules/scratch-vm/src/extensions/scratch3_${EXTENSION_ID}

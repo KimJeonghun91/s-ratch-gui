@@ -18,3 +18,8 @@ npm-*
 # Generated translation files
 /translations
 /locale
+
+node_modules
+.DS_Store
+dist
+keys
