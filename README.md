@@ -13,7 +13,7 @@ If you want to edit/play yourself:
 git clone https://github.com/LLK/scratch-gui.git
 cd scratch-gui
 npm install
-```
+``` 
 
 **You may want to add `--depth=1` to the `git clone` command because there are some [large files in the git repository history](https://github.com/LLK/scratch-gui/issues/5140).**
 
