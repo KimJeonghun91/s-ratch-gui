@@ -5,6 +5,9 @@ import ml2scratchIconURL from './ml2scratch.png';
 import ml2scratchInsetIconURL from './ml2scratch-small.png';
 
 const translationMap = {
+    'ko': {
+        'gui.extension.ml2scratch.description': '머신 러닝 블록'
+    },
     'ja': {
         'gui.extension.ml2scratch.description': '機械学習を使う'
     },

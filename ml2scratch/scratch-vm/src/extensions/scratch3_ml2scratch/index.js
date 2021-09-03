@@ -55,6 +55,7 @@ const Message = {
     'ja': 'ラベル[LABEL]を受け取ったとき',
     'ja-Hira': 'ラベル[LABEL]をうけとったとき',
     'en': 'when received label:[LABEL]',
+    'ko': '레이블을 받았을 때:[LABEL]',
     'zh-cn': '接收到类别[LABEL]时',
     'zh-tw': '接收到類別[LABEL]時'
   },
@@ -69,6 +70,7 @@ const Message = {
     'ja': 'ラベル1の枚数',
     'ja-Hira': 'ラベル1のまいすう',
     'en': 'counts of label 1',
+    'ko': '레이블 갯수 1',
     'zh-cn': '标签数量1',
     'zh-tw': '標籤數量1'
   },
@@ -231,7 +233,7 @@ const Message = {
     'ja-Hira': '[INPUT]のがぞうをがくしゅう/はんていする',
     'en': 'Learn/Classify [INPUT] image',
     'zh-cn': '学习/分类[INPUT]图像',
-	'zh-tw': '學習/分類[INPUT]影像'
+    'zh-tw': '學習/分類[INPUT]影像'
   },
   on: {
     'ja': '入',
@@ -277,7 +279,7 @@ const Message = {
   }
 }
 
-const AvailableLocales = ['en', 'ja', 'ja-Hira', 'zh-cn', 'zh-tw'];
+const AvailableLocales = ['en', 'ko', 'ja', 'ja-Hira', 'zh-cn', 'zh-tw'];
 
 class Scratch3ML2ScratchBlocks {
 
@@ -332,12 +334,12 @@ class Scratch3ML2ScratchBlocks {
     this.interval = 1000;
     this.globalVideoTransparency = 0;
     this.setVideoTransparency({
-        TRANSPARENCY: this.globalVideoTransparency
+      TRANSPARENCY: this.globalVideoTransparency
     });
 
     this.canvas = document.querySelector('canvas');
 
-    this.runtime.ioDevices.video.enableVideo().then(() => {this.input = this.runtime.ioDevices.video.provider.video});
+    this.runtime.ioDevices.video.enableVideo().then(() => { this.input = this.runtime.ioDevices.video.provider.video });
 
     this.knnClassifier = ml5.KNNClassifier();
     this.featureExtractor = ml5.featureExtractor('MobileNet', () => {
@@ -556,15 +558,15 @@ class Scratch3ML2ScratchBlocks {
         {
           opcode: 'setVideoTransparency',
           text: formatMessage({
-              id: 'videoSensing.setVideoTransparency',
-              default: 'set video transparency to [TRANSPARENCY]',
-              description: 'Controls transparency of the video preview layer'
+            id: 'videoSensing.setVideoTransparency',
+            default: 'set video transparency to [TRANSPARENCY]',
+            description: 'Controls transparency of the video preview layer'
           }),
           arguments: {
-              TRANSPARENCY: {
-                  type: ArgumentType.NUMBER,
-                  defaultValue: 50
-              }
+            TRANSPARENCY: {
+              type: ArgumentType.NUMBER,
+              defaultValue: 50
+            }
           }
         },
         {
@@ -610,20 +612,20 @@ class Scratch3ML2ScratchBlocks {
    * accessible by any object connected to the virtual machine.
    * @type {number}
    */
-  get globalVideoTransparency () {
-      const stage = this.runtime.getTargetForStage();
-      if (stage) {
-          return stage.videoTransparency;
-      }
-      return 50;
+  get globalVideoTransparency() {
+    const stage = this.runtime.getTargetForStage();
+    if (stage) {
+      return stage.videoTransparency;
+    }
+    return 50;
   }
 
-  set globalVideoTransparency (transparency) {
-      const stage = this.runtime.getTargetForStage();
-      if (stage) {
-          stage.videoTransparency = transparency;
-      }
-      return transparency;
+  set globalVideoTransparency(transparency) {
+    const stage = this.runtime.getTargetForStage();
+    if (stage) {
+      stage.videoTransparency = transparency;
+    }
+    return transparency;
   }
 
   addExample1() {
@@ -666,7 +668,7 @@ class Scratch3ML2ScratchBlocks {
     if (args.LABEL === 'any') {
       if (this.when_received) {
         setTimeout(() => {
-            this.when_received = false;
+          this.when_received = false;
         }, HAT_TIMEOUT);
         return true;
       }
@@ -822,12 +824,12 @@ class Scratch3ML2ScratchBlocks {
     uploadWindow.document.write('</body></html>');
     uploadWindow.document.close();
 
-    uploadWindow.document.getElementById("upload-button").onclick = () =>{
+    uploadWindow.document.getElementById("upload-button").onclick = () => {
       this.uploadButtonClicked(uploadWindow);
     }
   }
 
-  toggleClassification (args) {
+  toggleClassification(args) {
     let state = args.CLASSIFICATION_STATE;
     if (this.timer) {
       clearTimeout(this.timer);
@@ -839,7 +841,7 @@ class Scratch3ML2ScratchBlocks {
     }
   }
 
-  setClassificationInterval (args) {
+  setClassificationInterval(args) {
     if (this.timer) {
       clearTimeout(this.timer);
     }
@@ -850,12 +852,12 @@ class Scratch3ML2ScratchBlocks {
     }, this.interval);
   }
 
-  videoToggle (args) {
+  videoToggle(args) {
     let state = args.VIDEO_STATE;
     if (state === 'off') {
       this.runtime.ioDevices.video.disableVideo();
     } else {
-      this.runtime.ioDevices.video.enableVideo().then(() => {this.input = this.runtime.ioDevices.video.provider.video});
+      this.runtime.ioDevices.video.enableVideo().then(() => { this.input = this.runtime.ioDevices.video.provider.video });
       this.runtime.ioDevices.video.mirror = state === "on";
     }
   }
@@ -867,13 +869,13 @@ class Scratch3ML2ScratchBlocks {
    * @param {number} args.TRANSPARENCY - the transparency to set the video
    *   preview to
    */
-  setVideoTransparency (args) {
-      const transparency = Cast.toNumber(args.TRANSPARENCY);
-      this.globalVideoTransparency = transparency;
-      this.runtime.ioDevices.video.setPreviewGhost(transparency);
+  setVideoTransparency(args) {
+    const transparency = Cast.toNumber(args.TRANSPARENCY);
+    this.globalVideoTransparency = transparency;
+    this.runtime.ioDevices.video.setPreviewGhost(transparency);
   }
 
-  setInput (args) {
+  setInput(args) {
     let input = args.INPUT;
     if (input === 'webcam') {
       this.input = this.runtime.ioDevices.video.provider.video;
@@ -964,8 +966,8 @@ class Scratch3ML2ScratchBlocks {
       defaultValue = 'all';
       text = Message.all[this.locale];
     }
-    arr.push({text: text, value: defaultValue});
-    for(let i = 1; i <= 10; i++) {
+    arr.push({ text: text, value: defaultValue });
+    for (let i = 1; i <= 10; i++) {
       let obj = {};
       obj.text = i.toString(10);
       obj.value = i.toString(10);
@@ -976,7 +978,7 @@ class Scratch3ML2ScratchBlocks {
 
   getTrainMenu() {
     let arr = [];
-    for(let i = 4; i <= 10; i++) {
+    for (let i = 4; i <= 10; i++) {
       let obj = {};
       obj.text = i.toString(10);
       obj.value = i.toString(10);
@@ -1061,7 +1063,7 @@ class Scratch3ML2ScratchBlocks {
     if (AvailableLocales.includes(locale)) {
       return locale;
     } else {
-      return 'en';
+      return 'ko';
     }
   }
 }

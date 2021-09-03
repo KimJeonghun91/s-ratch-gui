@@ -58,8 +58,8 @@ export default [
         insetIconURL: ml2scratchInsetIconURL,
         description: (
             <FormattedMessage
-                defaultMessage='ML2Scratch Blocks.'
-                description='ML2Scratch Blocks.'
+                defaultMessage='머신러닝 블록 학습'
+                description='머신러닝 블록 학습'
                 id='gui.extension.ml2scratchblocks.description'
             />
         ),

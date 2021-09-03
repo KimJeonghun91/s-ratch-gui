@@ -26,6 +26,7 @@ const Message = {
     'ja': '分類[CLASS_INDEX]を受け取ったとき',
     'ja-Hira': 'ぶんるい[CLASS_INDEX]をうけとったとき',
     'en': 'when received class index:[CLASS_INDEX]',
+    'ko': '레이블을 받았을 때:[CLASS_INDEX]',
     'zh-cn': '接收到类别[CLASS_INDEX]时'
   },
   class_index_block: {
@@ -54,7 +55,7 @@ const Message = {
   }
 }
 
-const AvailableLocales = ['en', 'ja', 'ja-Hira', 'zh-cn'];
+const AvailableLocales = ['en','ko', 'ja', 'ja-Hira', 'zh-cn'];
 
 class Scratch3ML2ScratchBlocks {
   constructor (runtime) {
