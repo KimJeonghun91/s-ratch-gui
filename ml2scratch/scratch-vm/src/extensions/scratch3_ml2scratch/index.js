@@ -1063,7 +1063,7 @@ class Scratch3ML2ScratchBlocks {
     if (AvailableLocales.includes(locale)) {
       return locale;
     } else {
-      return 'ko';
+      return 'en';
     }
   }
 }

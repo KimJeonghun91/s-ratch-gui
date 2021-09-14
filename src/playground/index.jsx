@@ -21,6 +21,7 @@ const appTarget = document.createElement('div');
 appTarget.className = styles.app;
 document.body.appendChild(appTarget);
 
+// ###### devedu ######  true 나옴
 if (supportedBrowser()) {
     // require needed here to avoid importing unsupported browser-crashing code
     // at the top level

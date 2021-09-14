@@ -128,6 +128,33 @@ const LOCALIZED_TEXT = {
     choose_file: '选取文件...',
     readme: 'README',
     readme_url: "https://github.com/champierre/ml2scratch/blob/master/README.zh-cn.md"
+  },
+  ko: {
+    input: "输入",
+    connection: "连接",
+    trained_model: "学习模型",
+    trained_model_text: "上传学习模型",
+    training: "学习",
+    trained_images: "Trained Images",
+    settings: "设置",
+    settings_help_text: "WebSocket服务器链接",
+    connect: "连接",
+    connection_id: "连接ID",
+    recognition: "识别",
+    blank_id_is_invalid: "Blank ID is invalid.",
+    no_examples_added: "尚未学习",
+    examples: "examples",
+    train: '学习类别 %s',
+    edit_label: '编辑类别',
+    clear: '重置',
+    clear_all: '重置所有类别',
+    download: '下载',
+    upload: '上传',
+    help_text: "打开已加入扩展功能的Scratch的页面，把上面的连接ID拷贝到[用ID: []连接]模块的空白处。",
+    open_scratch: '打开Scratch',
+    choose_file: '选取文件...',
+    readme: 'README',
+    readme_url: "https://github.com/champierre/ml2scratch/blob/master/README.zh-cn.md"
   }
 }
 
@@ -150,6 +177,8 @@ class I18n {
       return LOCALIZED_TEXT['ja'][key].sprintf(arg);
     } else if (lang == 'zh_cn') {
       return LOCALIZED_TEXT['zh_cn'][key].sprintf(arg);
+    } else if (lang == 'ko') {
+      return LOCALIZED_TEXT['ko'][key].sprintf(arg);
     }else {
       return LOCALIZED_TEXT['en'][key].sprintf(arg);
     }

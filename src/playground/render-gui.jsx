@@ -60,6 +60,7 @@ export default appTarget => {
         // Warn before navigating away
         window.onbeforeunload = () => true;
     }
+    
 
     ReactDOM.render(
         // important: this is checking whether `simulateScratchDesktop` is truthy, not just defined!
