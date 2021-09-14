@@ -53,7 +53,29 @@ import ml2scratchInsetIconURL from './ml2scratch/ml2scratch-small.png';
 import facemesh2scratchIconURL from './facemesh2scratch/facemesh2scratch.png';
 import facemesh2scratchInsetIconURL from './facemesh2scratch/facemesh2scratch-small.png';
 
+import handpose2scratchIconURL from './handpose2scratch/handpose2scratch.png';
+import handpose2scratchInsetIconURL from './handpose2scratch/handpose2scratch-small.png';
+
 export default [
+    {
+        name: 'Handpose2Scratch',
+        extensionId: 'handpose2scratch',
+        collaborator: 'champierre',
+        iconURL: handpose2scratchIconURL,
+        insetIconURL: handpose2scratchInsetIconURL,
+        description: (
+            <FormattedMessage
+                defaultMessage='HandPose2Scratch Blocks.'
+                description='HandPose2Scratch Blocks.'
+                id='gui.extension.handpose2scratchblocks.description'
+            />
+        ),
+        featured: true,
+        disabled: false,
+        internetConnectionRequired: true,
+        bluetoothRequired: false,
+        helpLink: 'https://champierre.github.io/handpose2scratch/'
+    },
     {
         name: 'Facemesh2Scratch',
         extensionId: 'facemesh2scratch',
