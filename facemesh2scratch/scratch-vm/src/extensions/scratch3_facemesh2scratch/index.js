@@ -10,55 +10,65 @@ const Message = {
   getX: {
     'ja': '[PERSON_NUMBER] 人目の [KEYPOINT] 番目の部位のx座標',
     'ja-Hira': '[PERSON_NUMBER] にんめの [KEYPOINT] ばんめのぶいのxざひょう',
+    'ko': '[PERSON_NUMBER] 번째 사람의, x축 좌표: [KEYPOINT]',
     'en': 'x of person no: [PERSON_NUMBER] , keypoint no: [KEYPOINT]'
   },
   getY: {
     'ja': '[PERSON_NUMBER] 人目の [KEYPOINT] 番目の部位のy座標',
     'ja-Hira': '[PERSON_NUMBER] にんめの [KEYPOINT] ばんめのぶいのyざひょう',
+    'ko': '[PERSON_NUMBER] 번째 사람의, y축 좌표: [KEYPOINT]',
     'en': 'y of person no: [PERSON_NUMBER] , keypoint no: [KEYPOINT]'
   },
   peopleCount: {
     'ja': '人数',
     'ja-Hira': 'にんずう',
+    'ko': '인원수',
     'en': 'people count'
   },
   videoToggle: {
     'ja': 'ビデオを [VIDEO_STATE] にする',
     'ja-Hira': 'ビデオを [VIDEO_STATE] にする',
+    'ko': '비디오 상태 [VIDEO_STATE]',
     'en': 'turn video [VIDEO_STATE]'
   },
   setRatio: {
     'ja': '倍率を [RATIO] にする',
     'ja-Hira': 'ばいりつを [RATIO] にする',
+    'ko': '비율 [RATIO]',
     'en': 'set ratio to [RATIO]'
   },
   setInterval: {
     'ja': '認識を [INTERVAL] 秒ごとに行う',
     'ja-Hira': 'にんしきを [INTERVAL] びょうごとにおこなう',
+    'ko': '레이블 반복 [INTERVAL]초 마다',
     'en': 'Label once every [INTERVAL] seconds'
   },
   on: {
     'ja': '入',
     'ja-Hira': 'いり',
+    'ko': '켜기',
     'en': 'on'
   },
   off: {
     'ja': '切',
     'ja-Hira': 'きり',
+    'ko': '끄기',
     'en': 'off'
   },
   video_on_flipped: {
     'ja': '左右反転',
     'ja-Hira': 'さゆうはんてん',
+    'ko': '뒤집기',
     'en': 'on flipped',
   },
   please_wait: {
     'ja': '準備に時間がかかります。少しの間、操作ができなくなりますがお待ち下さい。',
     'ja-Hira': 'じゅんびにじかんがかかります。すこしのあいだ、そうさができなくなりますがおまちください。',
+    'ko': '준비중이에요. 브라우저가 느려질 수 있으니 기다려주세요.',
     'en': 'Setup takes a while. The browser will get stuck, but please wait.'
   }
 }
-const AvailableLocales = ['en', 'ja', 'ja-Hira'];
+const AvailableLocales = ['en','ko', 'ja', 'ja-Hira'];
 
 class Scratch3Facemesh2ScratchBlocks {
     get PERSON_NUMBER_MENU () {
