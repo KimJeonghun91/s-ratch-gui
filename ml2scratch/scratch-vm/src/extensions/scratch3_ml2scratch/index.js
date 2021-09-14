@@ -27,6 +27,7 @@ const Message = {
     'ja': 'ラベル1を学習する',
     'ja-Hira': 'ラベル1をがくしゅうする',
     'en': 'train label 1',
+    'ko': '학습 레이블 1',
     'zh-cn': '学习标签1',
     'zh-tw': '學習標籤1'
   },
@@ -34,12 +35,14 @@ const Message = {
     'ja': 'ラベル2を学習する',
     'ja-Hira': 'ラベル2をがくしゅうする',
     'en': 'train label 2',
+    'ko': '학습 레이블 2',
     'zh-cn': '学习标签2',
     'zh-tw': '學習標籤2'
   },
   train_label_3: {
     'ja': 'ラベル3を学習する',
     'ja-Hira': 'ラベル3をがくしゅうする',
+    'ko': '학습 레이블 3',
     'en': 'train label 3',
     'zh-cn': '学习标签3',
     'zh-tw': '學習標籤3'
@@ -62,6 +65,7 @@ const Message = {
   label_block: {
     'ja': 'ラベル',
     'ja-Hira': 'ラベル',
+    'ko': '레이블',
     'en': 'label',
     'zh-cn': '标签',
     'zh-tw': '標籤'
@@ -78,6 +82,7 @@ const Message = {
     'ja': 'ラベル2の枚数',
     'ja-Hira': 'ラベル2のまいすう',
     'en': 'counts of label 2',
+    'ko': '레이블 갯수 2',
     'zh-cn': '标签数量2',
     'zh-tw': '標籤數量2'
   },
@@ -85,6 +90,7 @@ const Message = {
     'ja': 'ラベル3の枚数',
     'ja-Hira': 'ラベル3のまいすう',
     'en': 'counts of label 3',
+    'ko': '레이블 갯수 3',
     'zh-cn': '标签数量3',
     'zh-tw': '標籤數量3'
   },
@@ -92,6 +98,7 @@ const Message = {
     'ja': 'ラベル4の枚数',
     'ja-Hira': 'ラベル4のまいすう',
     'en': 'counts of label 4',
+    'ko': '레이블 갯수 4',
     'zh-cn': '标签数量4',
     'zh-tw': '標籤數量4'
   },
@@ -99,6 +106,7 @@ const Message = {
     'ja': 'ラベル5の枚数',
     'ja-Hira': 'ラベル5のまいすう',
     'en': 'counts of label 5',
+    'ko': '레이블 갯수 5',
     'zh-cn': '标签数量5',
     'zh-tw': '標籤數量5'
   },
@@ -106,6 +114,7 @@ const Message = {
     'ja': 'ラベル6の枚数',
     'ja-Hira': 'ラベル6のまいすう',
     'en': 'counts of label 6',
+    'ko': '레이블 갯수 6',
     'zh-cn': '标签数量6',
     'zh-tw': '標籤數量6'
   },
@@ -113,6 +122,7 @@ const Message = {
     'ja': 'ラベル7の枚数',
     'ja-Hira': 'ラベル7のまいすう',
     'en': 'counts of label 7',
+    'ko': '레이블 갯수 7',
     'zh-cn': '标签数量7',
     'zh-tw': '標籤數量7'
   },
@@ -120,6 +130,7 @@ const Message = {
     'ja': 'ラベル8の枚数',
     'ja-Hira': 'ラベル8のまいすう',
     'en': 'counts of label 8',
+    'ko': '레이블 갯수 8',
     'zh-cn': '标签数量8',
     'zh-tw': '標籤數量8'
   },
@@ -127,6 +138,7 @@ const Message = {
     'ja': 'ラベル9の枚数',
     'ja-Hira': 'ラベル9のまいすう',
     'en': 'counts of label 9',
+    'ko': '레이블 갯수 9',
     'zh-cn': '标签数量9',
     'zh-tw': '標籤數量9'
   },
@@ -134,6 +146,7 @@ const Message = {
     'ja': 'ラベル10の枚数',
     'ja-Hira': 'ラベル10のまいすう',
     'en': 'counts of label 10',
+    'ko': '레이블 갯수 10',
     'zh-cn': '标签数量10',
     'zh-tw': '標籤數量10'
   },
@@ -141,6 +154,7 @@ const Message = {
     'ja': 'ラベル[LABEL]の枚数',
     'ja-Hira': 'ラベル[LABEL]のまいすう',
     'en': 'counts of label [LABEL]',
+    'ko': '레이블 갯수 [LABEL]',
     'zh-cn': '标签数量[LABEL]',
     'zh-tw': '標籤數量[LABEL]'
   },
@@ -148,6 +162,7 @@ const Message = {
     'ja': 'のどれか',
     'ja-Hira': 'のどれか',
     'en': 'any',
+    'ko': '어떤',
     'zh-cn': '任何',
     'zh-tw': '任何'
   },
@@ -155,6 +170,7 @@ const Message = {
     'ja': 'の全て',
     'ja-Hira': 'のすべて',
     'en': 'all',
+    'ko': '모두',
     'zh-cn': '所有',
     'zh-tw': '所有量'
   },
@@ -162,6 +178,7 @@ const Message = {
     'ja': 'ラベル[LABEL]の学習をリセット',
     'ja-Hira': 'ラベル[LABEL]のがくしゅうをリセット',
     'en': 'reset label:[LABEL]',
+    'ko': '레이블 초기화:[LABEL]',
     'zh-cn': '重置[LABEL]',
     'zh-tw': '重置[LABEL]'
   },
@@ -169,6 +186,7 @@ const Message = {
     'ja': '学習データをダウンロード',
     'ja-Hira': 'がくしゅうデータをダウンロード',
     'en': 'download learning data',
+    'ko': '학습 데이터 다운로드',
     'zh-cn': '下载学习数据',
     'zh-tw': '下載學習資料'
   },
@@ -176,6 +194,7 @@ const Message = {
     'ja': '学習データをアップロード',
     'ja-Hira': 'がくしゅうデータをアップロード',
     'en': 'upload learning data',
+    'ko': '학습 데이터 업로드',
     'zh-cn': '上传学习数据',
     'zh-tw': '上傳學習資料'
   },
@@ -183,6 +202,7 @@ const Message = {
     'ja': 'アップロード',
     'ja-Hira': 'アップロード',
     'en': 'upload',
+    'ko': '업로드',
     'zh-cn': '上传',
     'zh-tw': '上傳'
   },
@@ -190,6 +210,7 @@ const Message = {
     'ja': 'アップロードが完了しました。',
     'ja-Hira': 'アップロードがかんりょうしました。',
     'en': 'The upload is complete.',
+    'ko': '업로드 완료!',
     'zh-cn': '上传完成。',
     'zh-tw': '上傳完成。'
   },
@@ -204,6 +225,7 @@ const Message = {
     'ja': '本当にリセットしてもよろしいですか？',
     'ja-Hira': 'ほんとうにリセットしてもよろしいですか？',
     'en': 'Are you sure to reset?',
+    'ko': '정말로 초기화 하시겠습니까?',
     'zh-cn': '你确定要重置吗？',
     'zh-tw': '您確定要重置嗎？'
   },
@@ -211,6 +233,7 @@ const Message = {
     'ja': 'ラベル付けを[CLASSIFICATION_STATE]にする',
     'ja-Hira': 'ラベルづけを[CLASSIFICATION_STATE]にする',
     'en': 'turn classification [CLASSIFICATION_STATE]',
+    'ko': '분류 전환 [CLASSIFICATION_STATE]',
     'zh-cn': '[CLASSIFICATION_STATE]分类',
     'zh-tw': '[CLASSIFICATION_STATE]分類'
   },
@@ -218,6 +241,7 @@ const Message = {
     'ja': 'ラベル付けを[CLASSIFICATION_INTERVAL]秒間に1回行う',
     'ja-Hira': 'ラベルづけを[CLASSIFICATION_INTERVAL]びょうかんに1かいおこなう',
     'en': 'Label once every [CLASSIFICATION_INTERVAL] seconds',
+    'ko': '레이블 하나씩 반복 [CLASSIFICATION_INTERVAL] 초 마다',
     'zh-cn': '每隔[CLASSIFICATION_INTERVAL]秒标记一次',
     'zh-tw': '每隔[CLASSIFICATION_INTERVAL]秒標記一次'
   },
@@ -225,6 +249,7 @@ const Message = {
     'ja': 'ビデオを[VIDEO_STATE]にする',
     'ja-Hira': 'ビデオを[VIDEO_STATE]にする',
     'en': 'turn video [VIDEO_STATE]',
+    'ko': '비디오 변경 [VIDEO_STATE]',
     'zh-cn': '[VIDEO_STATE]摄像头',
     'zh-tw': '[VIDEO_STATE]切換攝影機'
   },
@@ -232,6 +257,7 @@ const Message = {
     'ja': '[INPUT]の画像を学習/判定する',
     'ja-Hira': '[INPUT]のがぞうをがくしゅう/はんていする',
     'en': 'Learn/Classify [INPUT] image',
+    'ko': '학습/분류 [INPUT] 이미지',
     'zh-cn': '学习/分类[INPUT]图像',
     'zh-tw': '學習/分類[INPUT]影像'
   },
@@ -239,6 +265,7 @@ const Message = {
     'ja': '入',
     'ja-Hira': 'いり',
     'en': 'on',
+    'ko': '켜기',
     'zh-cn': '开启',
     'zh-tw': '開啟'
   },
@@ -246,6 +273,7 @@ const Message = {
     'ja': '切',
     'ja-Hira': 'きり',
     'en': 'off',
+    'ko': '끄기',
     'zh-cn': '关闭',
     'zh-tw': '關閉'
   },
@@ -253,6 +281,7 @@ const Message = {
     'ja': '左右反転',
     'ja-Hira': 'さゆうはんてん',
     'en': 'on flipped',
+    'ko': '뒤집혔을때',
     'zh-cn': '镜像开启',
     'zh-tw': '左右翻轉'
   },
@@ -260,12 +289,14 @@ const Message = {
     'ja': 'カメラ',
     'ja-Hira': 'カメラ',
     'en': 'webcam',
+    'ko': '웹 카메라',
     'zh-cn': '网络摄像头',
     'zh-tw': '網路攝影機'
   },
   stage: {
     'ja': 'ステージ',
     'ja-Hira': 'ステージ',
+    'ko': '스테이지',
     'en': 'stage',
     'zh-cn': '舞台',
     'zh-tw': '舞台'
@@ -275,6 +306,7 @@ const Message = {
     'ja-Hira': 'さいしょのがくしゅうにはしばらくじかんがかかるので、なんどもクリックしないでください。',
     'en': 'The first training will take a while, so do not click again and again.',
     'zh-cn': '第一项研究需要一段时间，所以不要一次又一次地点击。',
+    'ko': '첫 학습은 오래걸릴 수 있어요. 버튼을 또 클릭하지 마세요.',
     'zh-tw': '第一次訓練需要一段時間，請稍後，不要一直點擊。'
   }
 }

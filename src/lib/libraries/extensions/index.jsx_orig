@@ -46,7 +46,28 @@ import gdxforInsetIconURL from './gdxfor/gdxfor-small.svg';
 import gdxforConnectionIconURL from './gdxfor/gdxfor-illustration.svg';
 import gdxforConnectionSmallIconURL from './gdxfor/gdxfor-small.svg';
 
+import ml2scratchIconURL from './ml2scratch/ml2scratch.png';
+import ml2scratchInsetIconURL from './ml2scratch/ml2scratch-small.png';
+
 export default [
+    {
+        name: 'ML2Scratch',
+        extensionId: 'ml2scratch',
+        collaborator: 'champierre',
+        iconURL: ml2scratchIconURL,
+        insetIconURL: ml2scratchInsetIconURL,
+        description: (
+            <FormattedMessage
+                defaultMessage='머신러닝 블록 학습'
+                description='머신러닝 블록 학습'
+                id='gui.extension.ml2scratchblocks.description'
+            />
+        ),
+        featured: true,
+        disabled: false,
+        internetConnectionRequired: true,
+        bluetoothRequired: false
+    },
     {
         name: (
             <FormattedMessage

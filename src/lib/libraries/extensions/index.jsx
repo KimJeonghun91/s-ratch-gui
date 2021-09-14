@@ -49,6 +49,7 @@ import gdxforConnectionSmallIconURL from './gdxfor/gdxfor-small.svg';
 import ml2scratchIconURL from './ml2scratch/ml2scratch.png';
 import ml2scratchInsetIconURL from './ml2scratch/ml2scratch-small.png';
 
+
 export default [
     {
         name: 'ML2Scratch',
