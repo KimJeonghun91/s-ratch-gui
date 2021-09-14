@@ -50,7 +50,28 @@ import ml2scratchIconURL from './ml2scratch/ml2scratch.png';
 import ml2scratchInsetIconURL from './ml2scratch/ml2scratch-small.png';
 
 
+import facemesh2scratchIconURL from './facemesh2scratch/facemesh2scratch.png';
+import facemesh2scratchInsetIconURL from './facemesh2scratch/facemesh2scratch-small.png';
+
 export default [
+    {
+        name: 'Facemesh2Scratch',
+        extensionId: 'facemesh2scratch',
+        collaborator: 'champierre',
+        iconURL: facemesh2scratchIconURL,
+        insetIconURL: facemesh2scratchInsetIconURL,
+        description: (
+            <FormattedMessage
+                defaultMessage='Face Tracking'
+                description='Face Tracking'
+                id='gui.extension.facemesh2scratch.description'
+            />
+        ),
+        featured: true,
+        disabled: false,
+        internetConnectionRequired: true,
+        bluetoothRequired: false
+    },
     {
         name: 'ML2Scratch',
         extensionId: 'ml2scratch',
