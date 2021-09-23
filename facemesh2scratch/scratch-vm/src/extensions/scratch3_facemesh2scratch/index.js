@@ -186,7 +186,7 @@ class Scratch3Facemesh2ScratchBlocks {
 
         return {
             id: 'facemesh2scratch',
-            name: 'Facemesh2Scratch',
+            name: '얼굴인식',
             blockIconURI: blockIconURI,
             blocks: [
                 {

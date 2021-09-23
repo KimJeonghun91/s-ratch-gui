@@ -58,7 +58,7 @@ import handpose2scratchInsetIconURL from './handpose2scratch/handpose2scratch-sm
 
 export default [
     {
-        name: 'Handpose2Scratch',
+        name: '손인식',
         extensionId: 'handpose2scratch',
         collaborator: 'champierre',
         iconURL: handpose2scratchIconURL,
@@ -77,15 +77,15 @@ export default [
         helpLink: 'https://champierre.github.io/handpose2scratch/'
     },
     {
-        name: 'Facemesh2Scratch',
+        name: '얼굴인식',
         extensionId: 'facemesh2scratch',
         collaborator: 'champierre',
         iconURL: facemesh2scratchIconURL,
         insetIconURL: facemesh2scratchInsetIconURL,
         description: (
             <FormattedMessage
-                defaultMessage='Face Tracking'
-                description='Face Tracking'
+                defaultMessage='Facemesh2Scratch'
+                description='Facemesh2Scratch'
                 id='gui.extension.facemesh2scratch.description'
             />
         ),
@@ -95,15 +95,15 @@ export default [
         bluetoothRequired: false
     },
     {
-        name: 'ML2Scratch',
+        name: '기계학습',
         extensionId: 'ml2scratch',
         collaborator: 'champierre',
         iconURL: ml2scratchIconURL,
         insetIconURL: ml2scratchInsetIconURL,
         description: (
             <FormattedMessage
-                defaultMessage='머신러닝 블록 학습'
-                description='머신러닝 블록 학습'
+                defaultMessage='ML2Scratch'
+                description='ML2Scratch'
                 id='gui.extension.ml2scratchblocks.description'
             />
         ),
