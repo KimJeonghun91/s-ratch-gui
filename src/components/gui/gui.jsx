@@ -309,9 +309,9 @@ const GUIComponent = props => {
                                             src={eduIcon}
                                         />
                                         <FormattedMessage
-                                            defaultMessage="Sounds"
-                                            description="Button to get to the sounds panel"
-                                            id="gui.gui.soundsTab"
+                                            defaultMessage="CustomTab"
+                                            description="Button to get to the CustomTab panel"
+                                            id="gui.gui.customTab"
                                         />
                                     </Tab>
                                 </TabList>
@@ -355,9 +355,11 @@ const GUIComponent = props => {
                                     {scodingTabVisible ? <ScodingTab vm={vm} /> : null}
                                 </TabPanel>
                             </Tabs>
-                            {backpackVisible ? (
+
+                            {/* scodinglog :  하단 개인 저장소 버튼 */}
+                            {/* {backpackVisible ? (
                                 <Backpack host={backpackHost} />
-                            ) : null}
+                            ) : null} */}
                         </Box>
 
                         <Box className={classNames(styles.stageAndTargetWrapper, styles[stageSize])}>
