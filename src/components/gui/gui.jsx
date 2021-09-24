@@ -2,16 +2,17 @@ import classNames from 'classnames';
 import omit from 'lodash.omit';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {defineMessages, FormattedMessage, injectIntl, intlShape} from 'react-intl';
-import {connect} from 'react-redux';
+import { defineMessages, FormattedMessage, injectIntl, intlShape } from 'react-intl';
+import { connect } from 'react-redux';
 import MediaQuery from 'react-responsive';
-import {Tab, Tabs, TabList, TabPanel} from 'react-tabs';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import tabStyles from 'react-tabs/style/react-tabs.css';
 import VM from 'scratch-vm';
 import Renderer from 'scratch-render';
 
 import Blocks from '../../containers/blocks.jsx';
 import CostumeTab from '../../containers/costume-tab.jsx';
+import ScodingTab from '../../containers/scoding-tab.jsx';
 import TargetPane from '../../containers/target-pane.jsx';
 import SoundTab from '../../containers/sound-tab.jsx';
 import StageWrapper from '../../containers/stage-wrapper.jsx';
@@ -31,14 +32,15 @@ import DragLayer from '../../containers/drag-layer.jsx';
 import ConnectionModal from '../../containers/connection-modal.jsx';
 import TelemetryModal from '../telemetry-modal/telemetry-modal.jsx';
 
-import layout, {STAGE_SIZE_MODES} from '../../lib/layout-constants';
-import {resolveStageSize} from '../../lib/screen-utils';
+import layout, { STAGE_SIZE_MODES } from '../../lib/layout-constants';
+import { resolveStageSize } from '../../lib/screen-utils';
 
 import styles from './gui.css';
 import addExtensionIcon from './icon--extensions.svg';
 import codeIcon from './icon--code.svg';
 import costumesIcon from './icon--costumes.svg';
 import soundsIcon from './icon--sounds.svg';
+import eduIcon from './icon--edu.svg';
 
 const messages = defineMessages({
     addExtension: {
@@ -114,6 +116,7 @@ const GUIComponent = props => {
         onTelemetryModalOptOut,
         showComingSoon,
         soundsTabVisible,
+        scodingTabVisible,
         stageSizeMode,
         targetIsStage,
         telemetryModalVisible,
@@ -296,6 +299,21 @@ const GUIComponent = props => {
                                             id="gui.gui.soundsTab"
                                         />
                                     </Tab>
+                                    <Tab
+                                        className={tabClassNames.tab}
+                                        onClick={onActivateSoundsTab}
+                                    >
+                                        <img
+                                            style={{}}
+                                            draggable={false}
+                                            src={eduIcon}
+                                        />
+                                        <FormattedMessage
+                                            defaultMessage="Sounds"
+                                            description="Button to get to the sounds panel"
+                                            id="gui.gui.soundsTab"
+                                        />
+                                    </Tab>
                                 </TabList>
                                 <TabPanel className={tabClassNames.tabPanel}>
                                     <Box className={styles.blocksWrapper}>
@@ -332,6 +350,9 @@ const GUIComponent = props => {
                                 </TabPanel>
                                 <TabPanel className={tabClassNames.tabPanel}>
                                     {soundsTabVisible ? <SoundTab vm={vm} /> : null}
+                                </TabPanel>
+                                <TabPanel className={tabClassNames.tabPanel}>
+                                    {scodingTabVisible ? <ScodingTab vm={vm} /> : null}
                                 </TabPanel>
                             </Tabs>
                             {backpackVisible ? (
@@ -419,6 +440,7 @@ GUIComponent.propTypes = {
     renderLogin: PropTypes.func,
     showComingSoon: PropTypes.bool,
     soundsTabVisible: PropTypes.bool,
+    scodingTabVisible: PropTypes.bool,
     stageSizeMode: PropTypes.oneOf(Object.keys(STAGE_SIZE_MODES)),
     targetIsStage: PropTypes.bool,
     telemetryModalVisible: PropTypes.bool,
