@@ -508,7 +508,7 @@ class MenuBar extends React.Component {
                                         {this.restoreOptionMessage(deletedItem)}
                                     </MenuItem>
                                 )}</DeletionRestorer>
-                                <MenuSection>
+                                {/* <MenuSection>
                                     <TurboMode>{(toggleTurboMode, { turboMode }) => (
                                         <MenuItem onClick={toggleTurboMode}>
                                             {turboMode ? (
@@ -526,6 +526,16 @@ class MenuBar extends React.Component {
                                             )}
                                         </MenuItem>
                                     )}</TurboMode>
+                                </MenuSection> */}
+
+
+                                {/* scoding - 선생님 메뉴 추가 */}
+                                <MenuSection>
+                                    <MenuItem onClick={() => { 
+                                       this.handleClickNew();
+                                     }}>
+                                        <div>1. 스크래치 기초</div>
+                                    </MenuItem>
                                 </MenuSection>
                             </MenuBarMenu>
                         </div>
