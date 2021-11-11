@@ -53,17 +53,41 @@ import ml2scratchInsetIconURL from './ml2scratch/ml2scratch-small.png';
 import facemesh2scratchIconURL from './facemesh2scratch/facemesh2scratch.png';
 import facemesh2scratchInsetIconURL from './facemesh2scratch/facemesh2scratch-small.png';
 
+import handpose2scratchIconURL from './handpose2scratch/handpose2scratch.png';
+import handpose2scratchInsetIconURL from './handpose2scratch/handpose2scratch-small.png';
+
+
+
 export default [
     {
-        name: 'Facemesh2Scratch',
+        name: '손인식',
+        extensionId: 'handpose2scratch',
+        collaborator: 'champierre',
+        iconURL: handpose2scratchIconURL,
+        insetIconURL: handpose2scratchInsetIconURL,
+        description: (
+            <FormattedMessage
+                defaultMessage='HandPose2Scratch Blocks.'
+                description='HandPose2Scratch Blocks.'
+                id='gui.extension.handpose2scratchblocks.description'
+            />
+        ),
+        featured: true,
+        disabled: false,
+        internetConnectionRequired: true,
+        bluetoothRequired: false,
+        helpLink: 'https://champierre.github.io/handpose2scratch/'
+    },
+    {
+        name: '얼굴인식',
         extensionId: 'facemesh2scratch',
         collaborator: 'champierre',
         iconURL: facemesh2scratchIconURL,
         insetIconURL: facemesh2scratchInsetIconURL,
         description: (
             <FormattedMessage
-                defaultMessage='Face Tracking'
-                description='Face Tracking'
+                defaultMessage='Facemesh2Scratch'
+                description='Facemesh2Scratch'
                 id='gui.extension.facemesh2scratch.description'
             />
         ),
@@ -73,15 +97,15 @@ export default [
         bluetoothRequired: false
     },
     {
-        name: 'ML2Scratch',
+        name: '기계학습',
         extensionId: 'ml2scratch',
         collaborator: 'champierre',
         iconURL: ml2scratchIconURL,
         insetIconURL: ml2scratchInsetIconURL,
         description: (
             <FormattedMessage
-                defaultMessage='머신러닝 블록 학습'
-                description='머신러닝 블록 학습'
+                defaultMessage='ML2Scratch'
+                description='ML2Scratch'
                 id='gui.extension.ml2scratchblocks.description'
             />
         ),

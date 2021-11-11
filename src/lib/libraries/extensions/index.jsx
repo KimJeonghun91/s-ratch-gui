@@ -56,6 +56,8 @@ import facemesh2scratchInsetIconURL from './facemesh2scratch/facemesh2scratch-sm
 import handpose2scratchIconURL from './handpose2scratch/handpose2scratch.png';
 import handpose2scratchInsetIconURL from './handpose2scratch/handpose2scratch-small.png';
 
+
+
 export default [
     {
         name: '손인식',
