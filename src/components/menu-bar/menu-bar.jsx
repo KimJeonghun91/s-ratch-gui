@@ -544,7 +544,7 @@ class MenuBar extends React.Component {
                     <div
                         aria-label={this.props.intl.formatMessage(ariaMessages.tutorials)}
                         className={classNames(styles.menuBarItem, styles.hoverable)}
-                        onClick={() => { this.props.openTeacherModal(); }}
+                        onClick={() => { this.props.openTeacherModal(true); }}
                     >
                         <img className={styles.helpIcon} src={helpIcon} />
 

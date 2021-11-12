@@ -68,8 +68,8 @@ class GUI extends React.Component {
             this.props.onProjectLoaded();
         }
     }
-    openTeacherModal = () => {
-        this.setState({ isModalTeacher: true });
+    openTeacherModal = (isOpne) => {
+        this.setState({ isModalTeacher: isOpne });
     };
     render() {
         if (this.props.isError) {
@@ -114,7 +114,7 @@ class GUI extends React.Component {
                     this.state.isModalTeacher && (
                         <div className={scodingStyles.teacherBg} onClick={(evt) => { if (evt.target === evt.currentTarget) this.setState({ isModalTeacher: false }); }}>
                             <div className={scodingStyles.teacherBox}>
-
+                                <div style={{padding:30}}>1. 에스코딩 AI 프로젝트</div>
                             </div>
                         </div>
                     )
