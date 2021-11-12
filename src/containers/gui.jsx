@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {compose} from 'redux';
-import {connect} from 'react-redux';
+import { compose } from 'redux';
+import { connect } from 'react-redux';
 import ReactModal from 'react-modal';
 import VM from 'scratch-vm';
-import {injectIntl, intlShape} from 'react-intl';
+import { injectIntl, intlShape } from 'react-intl';
 
 import ErrorBoundaryHOC from '../lib/error-boundary-hoc.jsx';
 import {
@@ -39,15 +39,26 @@ import vmManagerHOC from '../lib/vm-manager-hoc.jsx';
 import cloudManagerHOC from '../lib/cloud-manager-hoc.jsx';
 
 import GUIComponent from '../components/gui/gui.jsx';
-import {setIsScratchDesktop} from '../lib/isScratchDesktop.js';
+import { setIsScratchDesktop } from '../lib/isScratchDesktop.js';
+
+import scodingStyles from '../css/scodingcss.css';
+
 
 class GUI extends React.Component {
-    componentDidMount () {
+    constructor(props) {
+        super(props);
+        this.state = {
+            isModalTeacher: false
+        }
+    }
+
+
+    componentDidMount() {
         setIsScratchDesktop(this.props.isScratchDesktop);
         this.props.onStorageInit(storage);
         this.props.onVmInit(this.props.vm);
     }
-    componentDidUpdate (prevProps) {
+    componentDidUpdate(prevProps) {
         if (this.props.projectId !== prevProps.projectId && this.props.projectId !== null) {
             this.props.onUpdateProjectId(this.props.projectId);
         }
@@ -57,7 +68,10 @@ class GUI extends React.Component {
             this.props.onProjectLoaded();
         }
     }
-    render () {
+    openTeacherModal = () => {
+        this.setState({ isModalTeacher: true });
+    };
+    render() {
         if (this.props.isError) {
             throw new Error(
                 `Error in Scratch GUI [location=${window.location}]: ${this.props.error}`);
@@ -84,12 +98,30 @@ class GUI extends React.Component {
             ...componentProps
         } = this.props;
         return (
-            <GUIComponent
-                loading={fetchingProject || isLoading || loadingStateVisible}
-                {...componentProps}
-            >
-                {children}
-            </GUIComponent>
+            <div style={{ width: '100%', height: '100%' }}>
+                <GUIComponent
+                    loading={fetchingProject || isLoading || loadingStateVisible}
+                    openTeacherModal={this.openTeacherModal}
+                    {...componentProps}
+                >
+                    {children}
+                </GUIComponent>
+
+
+
+                {/* scodinglog - 선생님 전용 뷰 */}
+                {
+                    this.state.isModalTeacher && (
+                        <div className={scodingStyles.teacherBg} onClick={(evt) => { if (evt.target === evt.currentTarget) this.setState({ isModalTeacher: false }); }}>
+                            <div className={scodingStyles.teacherBox}>
+
+                            </div>
+                        </div>
+                    )
+                }
+
+                {/* <ModalTeacher ModalCb={() => { }} isModalOpen={true} /> */}
+            </div>
         );
     }
 }
@@ -120,9 +152,9 @@ GUI.propTypes = {
 GUI.defaultProps = {
     isScratchDesktop: false,
     onStorageInit: storageInstance => storageInstance.addOfficialScratchWebStores(),
-    onProjectLoaded: () => {},
-    onUpdateProjectId: () => {},
-    onVmInit: (/* vm */) => {}
+    onProjectLoaded: () => { },
+    onUpdateProjectId: () => { },
+    onVmInit: (/* vm */) => { }
 };
 
 const mapStateToProps = state => {

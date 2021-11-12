@@ -481,12 +481,8 @@ class MenuBar extends React.Component {
                                 </MenuBarMenu>
                             </div>
                         )}
-                        <div
-                            className={classNames(styles.menuBarItem, styles.hoverable, {
-                                [styles.active]: this.props.editMenuOpen
-                            })}
-                            onMouseUp={this.props.onClickEdit}
-                        >
+                        <div className={classNames(styles.menuBarItem, styles.hoverable, { [styles.active]: this.props.editMenuOpen })}
+                            onMouseUp={this.props.onClickEdit} >
                             <div className={classNames(styles.editMenu)}>
                                 <FormattedMessage
                                     defaultMessage="Edit"
@@ -529,17 +525,38 @@ class MenuBar extends React.Component {
                                 </MenuSection> */}
 
 
-                                {/* scoding - 선생님 메뉴 추가 */}
-                                <MenuSection>
+                                {/* scoding - 하위 메뉴 추가 */}
+                                {/* <MenuSection>
                                     <MenuItem onClick={() => { 
                                        this.handleClickNew();
                                      }}>
                                         <div>1. 스크래치 기초</div>
                                     </MenuItem>
-                                </MenuSection>
+                                </MenuSection> */}
                             </MenuBarMenu>
                         </div>
                     </div>
+
+
+                    {/* scoding - 선생님 메뉴 추가 */}
+                    <Divider className={classNames(styles.divider)} />
+
+                    <div
+                        aria-label={this.props.intl.formatMessage(ariaMessages.tutorials)}
+                        className={classNames(styles.menuBarItem, styles.hoverable)}
+                        onClick={() => { this.props.openTeacherModal(); }}
+                    >
+                        <img className={styles.helpIcon} src={helpIcon} />
+
+                        <FormattedMessage
+                            defaultMessage="선생님 교안"
+                            description="선생님 전용 메뉴"
+                            id="gui.menuBar.scdoingtextbook"
+                        />
+                    </div>
+
+                    <Divider className={classNames(styles.divider)} />
+
 
 
                     {/* scodinglog - 튜토리얼 버튼 숨김 */}

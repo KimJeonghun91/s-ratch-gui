@@ -85,6 +85,7 @@ const GUIComponent = props => {
         intl,
         isCreating,
         isFullScreen,
+        isModalOpen,
         isPlayerOnly,
         isRtl,
         isShared,
@@ -122,6 +123,7 @@ const GUIComponent = props => {
         telemetryModalVisible,
         tipsLibraryVisible,
         vm,
+        openTeacherModal,
         ...componentProps
     } = omit(props, 'dispatch');
     if (children) {
@@ -239,6 +241,7 @@ const GUIComponent = props => {
                     onShare={onShare}
                     onStartSelectingFileUpload={onStartSelectingFileUpload}
                     onToggleLoginOpen={onToggleLoginOpen}
+                    openTeacherModal={openTeacherModal}
                 />
                 <Box className={styles.bodyWrapper}>
                     <Box className={styles.flexWrapper}>
@@ -382,6 +385,7 @@ const GUIComponent = props => {
                 <DragLayer />
             </Box>
         );
+
     }}</MediaQuery>);
 };
 
@@ -413,6 +417,7 @@ GUIComponent.propTypes = {
     intl: intlShape.isRequired,
     isCreating: PropTypes.bool,
     isFullScreen: PropTypes.bool,
+    isModalOpen:PropTypes.bool,
     isPlayerOnly: PropTypes.bool,
     isRtl: PropTypes.bool,
     isShared: PropTypes.bool,

@@ -1,10 +1,12 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 import { Modal } from 'antd';
 // import {isMobile} from 'react-device-detect';
 // import * as SG from '../constants/Signature'
 
 
 
-const ModalLogin = ({ ModalCb, isModalOpen }) => {
+const ModalTeacher = ({ ModalCb, isModalOpen }) => {
   // const [loading, setLoading] = useState(false)
 
   return (
@@ -22,4 +24,4 @@ const ModalLogin = ({ ModalCb, isModalOpen }) => {
     </Modal>
   );
 }
-export default ModalLogin;
+export default ModalTeacher;
